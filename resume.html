@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        html{
+            margin-left: -8px;
+            background-image: URL("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Monochrome-Type-Simple-Background-Image.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .NavigationBar a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .NavigationBar {
+            position: fixed;
+            width: 100%;
+            height: 44px;
+            z-index: 2;
+            /* left: calc(50% - 103px/2); */
+            top: 0%;
+            /* Headline 4 */
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 92px;
+            padding-top: 0.1em;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            background-image: url("images/gradientBackgroundNavigation.svg");
+            /* background-size: 100%; */
+            background-repeat: no-repeat;
+
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            /* White */
+            color: #FFFFFF;
+            text-decoration-style: solid;
+            text-rendering: auto;
+        }
+
+        .NavigationBar a:hover {
+            color: purple;
+            cursor: pointer;
+            padding-bottom: 3px;
+            border-bottom: 3px solid purple;
+        }
+
+        .ResumeDiv{
+            /* height: 100vh; */
+            padding-top: 3%;
+            /* padding-left: 20%;
+            padding-right: 20%; */
+            text-align: center;
+            align-items: center;
+
+        }
+        #name {
+            position: absolute;
+            font-family: Sacramento;
+            right: 10%;
+            font-size: 20px;
+            margin-top: -10px;
+            margin-right: 5%;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="NavigationBar">
+        <!-- Navigation Bar -->
+        <p style="padding-left: 5%;">
+            <a href="index.html">
+                Home
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="blog.html">
+                Blog
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="resume.html">
+                Resume
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="contact.html">
+                Contact
+            </a>
+        </p>
+    </div>
+
+    <div class="ResumeDiv">
+        <!-- <object
+          data='resume.pdf'
+          type="application/pdf"
+          width="500"
+          height="710"
+        > -->
+  
+          <iframe
+            src='resume.pdf'
+            width="500"
+            height="710"
+          >
+          <p>This browser does not support PDF!</p>
+          </iframe>
+          <p id="name">Krishna Kotni</p>
+  
+        <!-- </object> -->
+        <!-- <img class="ResumeImage" src="images/resume/resume.png" alt="Resume Picture"> -->
+
+    </div>
+
+</body>
+
+</html>

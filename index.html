@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Page</title>
+    <style>
+        .Main {
+            position: relative;
+            background-image: url("images/gradientBackground.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .NavigationBar a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .TogglePDF {
+            position: absolute;
+            right: 33%;
+            top: 35em;
+            /* bottom: 10px; */
+            z-index: 10;
+        }
+
+
+        input[type=checkbox] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+
+        label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 100px;
+            height: 50px;
+            background: grey;
+            display: block;
+            border-radius: 100px;
+            position: relative;
+        }
+
+        label:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 90px;
+            transition: 0.3s;
+        }
+
+        input:checked+label {
+            background: #bada55;
+        }
+
+        input:checked+label:after {
+            left: calc(100% - 10px);
+            transform: translateX(-100%);
+        }
+
+        input:checked+.PDFImage {
+            transform: translateX(300px);
+        }
+
+
+        .PDFImage {
+            position: absolute;
+            right: 0px;
+            width: 33%;
+            height: auto;
+            top: 2.5em;
+        }
+
+        .PDFImage img {
+            width: 100%;
+            will-change: transform;
+            transition: transform 250ms;
+            animation: PDFImageAnimation 5s 2.5s ease-out;
+        }
+
+        .PDFImage:hover img {
+            transform: translateX(40%);
+
+        }
+
+        @keyframes PDFImageAnimation {
+            10%,80%{
+                transform: translateX(40%);
+            }
+            90%{
+                transform: translateX(0%);
+            }
+        }
+
+
+        .Portrait {
+            position: absolute;
+            right: 20%;
+            top: 22%;
+            width: 10%;
+            border-radius: 120px;
+        }
+
+        .NavigationBar {
+            position: fixed;
+            width: 100%;
+            height: 44px;
+            z-index: 2;
+            /* left: calc(50% - 103px/2); */
+            top: 0%;
+            /* Headline 4 */
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            /* line-height: 92px; */
+            padding-top: 0.1em;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            background-image: url("images/gradientBackgroundNavigation.svg");
+            /* background-size: 100%; */
+
+            /* background-attachment: fixed; */
+            background-repeat: no-repeat;
+
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            /* White */
+            color: #FFFFFF;
+            text-decoration-style: solid;
+            text-rendering: auto;
+        }
+
+        .NavigationBar a:hover {
+            color: purple;
+            cursor: pointer;
+            padding-bottom: 3px;
+            border-bottom: 3px solid purple;
+        }
+
+        .Heading {
+            position: relative;
+            width: 60%;
+            height: 10%;
+            left: 8%;
+            top: 0.4em;
+
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 600%;
+            line-height: 125%;
+            /* letter-spacing: -0.04em; */
+            color: #393939;
+        }
+
+        .SubText {
+            position: relative;
+            width: 45%;
+            height: 6%;
+            left: 9%;
+            top: -1em;
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 110%;
+            line-height: 200%;
+            color: #425466;
+
+            /* mix-blend-mode: luminosity; */
+        }
+
+
+        .Languages {
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: normal;
+            color: #5b5f63;
+            margin-left: 9%;
+            padding-top: 1%;
+            left: 9%;
+        }
+
+        .LanguageIcons {
+            width: 80px;
+            height: 80px;
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+
+        .LibOther {
+            display: flex;
+            /* justify-content: space-between; */
+            /* position: inherit; */
+            padding-top: 5%;
+            margin-left: 9%;
+            margin-right: 15%;
+
+        }
+
+        .Libraries {
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: normal;
+            color: #5b5f63;
+
+        }
+
+        .LibrariesIcons {
+            width: 80px;
+            height: 80px;
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+
+        .Others {
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: normal;
+            padding-left: 25%;
+            color: #5b5f63;
+
+        }
+
+        .contact {
+            position: absolute;
+            display: flex;
+            right: 5%;
+            padding-top: 6%;
+        }
+
+        .contact a {
+            padding-top: 11.5%;
+        }
+    </style>
+</head>
+
+<body class="Main">
+
+    <div class="NavigationBar">
+        <!-- Navigation Bar -->
+        <p style="padding-left: 5%;">
+            <a href="index.html">
+                Home
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="blog.html">
+                Blog
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="resume.html">
+                Resume
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="contact.html">
+                Contact
+            </a>
+        </p>
+    </div>
+
+    <!-- <div class="TogglePDF">
+        <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+    </div> -->
+
+    <img class="Portrait" src="images/Portrait.png" alt="">
+
+    <div class="PDFImage">
+        <img src="images/GroupDigitalNotes-2.png" alt="Notes Picture">
+    </div>
+
+    <p class="Heading">
+        Kotni <br>Krishna <br>Chaitanya
+    </p>
+    <p class="SubText">
+        Hello there🎃, I am a student of BML Munjal University⛪️, Gurgaon. I am currently completing my intership at
+        sabudh foundation🍩.
+    </p>
+
+
+    <div class="Languages">
+        <h1>Languages</h1>
+
+        <div style="display: flex;">
+            <div><img class="LanguageIcons" src="images/Languages/c.svg" alt="">
+                <p style="text-align: center;">C</p>
+            </div>
+            <div><img class="LanguageIcons" src="images/Languages/c-2.svg" alt="">
+                <p style="text-align: center;">C++</p>
+            </div>
+            <div><img class="LanguageIcons" src="images/Languages/java.svg" alt="">
+                <p style="text-align: center;">Java</p>
+            </div>
+            <div> <img class="LanguageIcons" src="images/Languages/python.svg" alt="">
+                <p style="text-align: center;">Python</p>
+            </div>
+            <div><img class="LanguageIcons" src="images/Languages/swift.svg" alt="">
+                <p style="text-align: center;">Swift</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="LibOther">
+
+        <div class="Libraries">
+            <h1>Libraries</h1>
+
+            <div style="display: flex;">
+                <div><img class="LibrariesIcons" src="images/Libraries/matplotlib.jpg" alt="">
+                    <p style="text-align: center;">Mathplot Lib</p>
+                </div>
+                <div> <img class="LibrariesIcons" src="images/Libraries/pandas.jpg" alt="">
+                    <p style="text-align: center;">Pandas</p>
+                </div>
+                <div><img class="LibrariesIcons" src="images/Libraries/numpy.jpg" alt="">
+                    <p style="text-align: center;">Numpy</p>
+                </div>
+                <div><img class="LibrariesIcons" src="images/Libraries/opencv.jpg" alt="">
+                    <p style="text-align: center;">OpenCV</p>
+                </div>
+                <!-- <div><img class="LibrariesIcons" src="images/Libraries/swift.svg" alt="">
+                    <p style="text-align: center;">Swift</p>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="Others">
+            <h1>Others</h1>
+
+            <div style="display: flex;">
+                <div><img class="LibrariesIcons" src="images/Others/tensorflow.png" alt="">
+                    <p style="text-align: center;">Tensorflow</p>
+                </div>
+                <div><img class="LibrariesIcons" src="images/Others/git.png" alt="">
+                    <p style="text-align: center;">Git</p>
+                </div>
+                <!-- <div><img class="LibrariesIcons" src="images/Others/numpy.jpg" alt="">
+        <p style="text-align: center;">Numpy</p></div>
+        <div><img class="LibrariesIcons" src="images/Others/opencv.jpg" alt="">
+        <p style="text-align: center;">OpenCV</p></div>
+        <div><img class="LibrariesIcons" src="images/Others/swift.svg" alt="">
+        <p style="text-align: center;">Swift</p></div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <img style="float: right;" src="images/ContactInfoBackground.svg" alt="Contact Background">
+
+    <div class="contact">
+        <p style="font-family: Helvetica Neue;font-size: 20px;line-height: 92px;letter-spacing: 0.1em;">
+            Reach me out: &nbsp;
+        </p>
+        <a href="https://github.com/reach-the-sky">
+            <img src="images/Social Icons/Github.svg" alt="Github">
+        </a>
+        <a href="https://www.linkedin.com/in/kotni-krishna-chaitanya/">
+            <img src="images/Social Icons/Linkedin.svg" alt="Linkedin">
+        </a>
+        <a href="contact.html">
+            <img src="images/Social Icons/email.svg" alt="Twitter">
+        </a>
+    </div>
+
+</body>
+
+</html>

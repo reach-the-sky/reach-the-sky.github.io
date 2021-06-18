@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin Dark' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .NavigationBar a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .NavigationBar a:hover {
+            color: purple;
+            cursor: pointer;
+            padding-bottom: 3px;
+            border-bottom: 3px solid purple;
+        }
+
+        body {
+            margin: 0px;
+            scroll-behavior: smooth;
+        }
+
+        .NavigationBar {
+            position: fixed;
+            width: 100%;
+            height: 44px;
+            z-index: 2;
+            /* left: calc(50% - 103px/2); */
+            top: 0%;
+            /* Headline 4 */
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 92px;
+            padding-top: 0.1em;
+            /* or 613% */
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            background-image: url("images/gradientBackgroundNavigation.svg");
+            
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            
+            /* White */
+            color: #FFFFFF;
+            text-decoration-style: solid;
+            text-rendering: auto;
+        }
+        
+        .RocketFly{
+            position: absolute;
+            top: 100px;
+            display: block;
+            max-width: 300px;
+            max-height: 400px;
+            width: 20%;
+            height: auto;
+
+        }
+        .MainDiv {
+            padding-top: 10%;
+            margin-left: 10%;
+            background: linear-gradient(90deg, #FFC0CB 40%, #ffffff 10%);
+            padding-bottom: 4%;
+            margin-bottom: 0;
+			height: 100vh;
+        }
+
+
+        .Heading {
+
+            padding-left: 7%;
+            font-family: "Palanquin Dark";
+            letter-spacing: 1px;
+            line-height: 1.1;
+            font-size: 3rem;
+        }
+
+
+        .Text {
+            width: 40%;
+            padding-left: 10%;
+            font-size: 1.25rem;
+            font-family: "Lato";
+            /* font-family: "sans-serif"; */
+            letter-spacing: 0.5px;
+			font-stretch: ultra-expanded;
+            line-height: 1.8;
+        }
+
+        .MailForm {
+            background-color: rgb(233, 222, 222);
+            padding: 1%;
+            border-radius: 10px;
+            /* margin-left: auto; */
+            /* margin-right: 0px; */
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 45%;
+            right: 8%;
+        }
+        .form-row{
+            display: flex;
+        }
+
+        .MailForm h1{
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .MailForm textarea,
+        .MailForm button {
+            width: 400px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            padding: 2%;
+            margin-top: 3%;
+
+        }
+
+        .MailForm textarea {
+            height: 110px;
+            font-size: 12px;
+        }
+
+        form{
+            height: auto;
+            right: 0px;
+        }
+
+        .MailForm button {
+            width: 420px;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+        }
+        .MailForm input{
+            width: 183px;
+            font-size: 12px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 3%;
+            margin-right: 30px;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="NavigationBar">
+        <!-- Navigation Bar -->
+        <p style="padding-left: 5%;">
+            <a href="index.html">
+                Home
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="blog.html">
+                Blog
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="resume.html">
+                Resume
+            </a>
+        </p>
+        <p style="padding-left: 4%;">
+            <a href="contact.html">
+                Contact
+            </a>
+        </p>
+    </div>
+
+    <img src="images/RocketFly.png" class="RocketFly" alt="RocketFlyImage">
+
+    <div class="MainDiv">
+        <h1 class="Heading">
+            Lets Chat💂‍♂️
+        </h1>
+
+        <p class="Text">Heyy It's me🎃, the same guy you saw on the home page. If you missed it go back to the home page and hover on the blurred paper document to the right, you can find a treasure hidden there👻. Yeah Yeah I know it's just my pic, But at a time, full of privacy violations I had to raise my guard. Just as a digital cover💩. With data cost comming down, more people are getting added to the ocean🏖 of Internet and entities are adding more and more servers to scrape websites and get as much data as possible. We need to protect ourselves. Okk enough of this privacy talk😡. Oh yeah I have an awesome idea.......  Contact Me....📇</p>
+		<!-- <b>BUCxCQAACHqlX+oRoeZC7H8pCJFL/mna</b> <a href="https://toolbox.googleapps.com/apps/encode_decode/">(Decode SAML)</a> -->
+
+    </div>
+
+
+    <div class="container MailForm">
+        <h1>Wanna Chat!!</h1>
+        <form target="_blank" action="https://formsubmit.co/kotnikrishnachaitanya@gmail.com" method="POST">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="col">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <input type="hidden" name="_autoresponse" value="Hey, I got your mail. I'll get back to you once I go through it😀.">
+            <input type="hidden" name="_captcha" value="false">
+                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+            
+        </form>
+    </div>
+</body>
+
+</html>
