@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
+    
 
     <style>
         html{
@@ -85,7 +86,20 @@
             padding-bottom: 3px;
             padding-left: 25px;
             padding-right: 25px;
+            overflow: scroll;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        @media only screen and (max-width :700px){
+            .BlogContent{
+                margin-top: 10%;
+            }
+        }
+            
+        @media only screen and (min-width: 1400px){
+            .NavigationBar{
+                background-size: 100%;
+            }
         }
     </style>
 
@@ -116,7 +130,7 @@
     </div>
 
     <div class="BlogContent">
-        <div class="BlogItem">
+        <!-- <div class="BlogItem">
             <h2>Best Mac Apps</h2>
             <a href="https://krishnakotni.medium.com/mac-apps-that-increase-your-productivity-ca7bc767a4c">Medium Article</a>
             <p>Know about the best mac apps that I use to increase my productivity, they help accomplish simple tasks, which can prove to be very efficient at some times.</p>
@@ -125,11 +139,8 @@
             <h2>VS Code features you need to know</h2>
             <a href="https://krishnakotni.medium.com/vs-code-features-you-need-to-know-6310e37beef5">Medium Article</a>
             <p>Know about the best VS Code features that increase your programming workflow speed.</p>
-        </div>
+        </div> -->
     </div>
-
-
-
-
 </body>
+<script src="blog.js"></script>
 </html>

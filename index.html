@@ -90,7 +90,6 @@
 
         .PDFImage:hover img {
             transform: translateX(40%);
-
         }
 
         @keyframes PDFImageAnimation {
@@ -161,7 +160,7 @@
             font-family: Helvetica Neue;
             font-style: normal;
             font-weight: bold;
-            font-size: 600%;
+            font-size: 6em;
             line-height: 125%;
             /* letter-spacing: -0.04em; */
             color: #393939;
@@ -193,6 +192,10 @@
             padding-top: 1%;
             left: 9%;
         }
+        .LanguagesActual{
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         .LanguageIcons {
             width: 80px;
@@ -205,6 +208,7 @@
             display: flex;
             /* justify-content: space-between; */
             /* position: inherit; */
+            /* flex-wrap: wrap; */
             padding-top: 5%;
             margin-left: 9%;
             margin-right: 15%;
@@ -244,6 +248,46 @@
 
         .contact a {
             padding-top: 11.5%;
+        }
+
+        @media only screen and (min-width: 1400px){
+            .NavigationBar{
+                background-size: 100%;
+                overflow: hidden;
+            }
+        }
+
+        @media only screen and (max-width: 900px){
+            .LibOther{
+                display: block;
+            }
+            .Others{
+                padding-top: 5%;
+                padding-left: 0px;
+            }
+            .Portrait{
+                display: none;
+            }
+            .SubText{
+                width: 60%;
+            }
+            .Heading{
+                font-size: 400%;
+            }
+        }
+        @media only screen and (max-width: 800px){
+            .Languages{
+                /* display: block; */
+            }
+            .PDFImage{
+                display: none;
+            }
+            .LanguagesActual{
+                /* display: block; */
+            }
+            .LanguageIcons{
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -296,7 +340,7 @@
     <div class="Languages">
         <h1>Languages</h1>
 
-        <div style="display: flex;">
+        <div class="LanguagesActual">
             <div><img class="LanguageIcons" src="images/Languages/c.svg" alt="C">
                 <p style="text-align: center;">C</p>
             </div>
@@ -323,7 +367,7 @@
         <div class="Libraries">
             <h1>Libraries</h1>
 
-            <div style="display: flex;">
+            <div style="display: flex;flex-wrap: wrap;">
                 <div><img class="LibrariesIcons" src="images/Libraries/matplotlib.jpg" alt="">
                     <p style="text-align: center;">Mathplot Lib</p>
                 </div>
