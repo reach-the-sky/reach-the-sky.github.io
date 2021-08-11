@@ -214,12 +214,33 @@
             padding-left: 18px;
         }
 
+        .DataBases {
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: normal;
+            color: #5b5f63;
+            margin-left: 9%;
+            padding-top: 1%;
+            left: 9%;
+        }
+        .DataBaseActual{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .DataBaseIcons {
+            width: 80px;
+            height: 80px;
+            padding-right: 22px;
+            padding-left: 22px;
+        }
+
         .LibOther {
             display: flex;
             /* justify-content: space-between; */
             /* position: inherit; */
             /* flex-wrap: wrap; */
-            padding-top: 5%;
+            /* padding-top: 5%; */
             margin-left: 9%;
             margin-right: 15%;
 
@@ -290,6 +311,9 @@
                 display: none;
             }
             .LanguageIcons{
+                align-items: center;
+            }
+            .DataBaseIcons{
                 align-items: center;
             }
         }
@@ -365,6 +389,27 @@
             </div>
         </div>
     </div>
+
+    <div class="DataBases">
+        <h1>DataBases</h1>
+
+        <div class="DataBaseActual">
+            <div style="padding-top: 3px"><img class="DataBaseIcons" src="images/DataBases/firebase.png" alt="C">
+                <p style="text-align: center;">Firebase</p>
+            </div>
+            <div style="padding-top: 3px"><img class="DataBaseIcons" src="images/DataBases/neo4j.png" style="width: 120px" alt="C">
+                <p style="text-align: center;">Neo4j</p>
+            </div>
+            <div style="padding-top: 3px"><img class="DataBaseIcons" src="images/DataBases/mongodb.jpeg" style="width: 120px" alt="C">
+                <p style="text-align: center;">MongoDB</p>
+            </div>
+            <div style="padding-top: 3px"><img class="DataBaseIcons" src="images/DataBases/mysql.png" style="width: 120px" alt="C">
+                <p style="text-align: center;">MySQL</p>
+            </div>
+            
+        </div>
+    </div>
+
 
     <div class="LibOther">
 
